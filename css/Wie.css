@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Montserrat:ital@0;1&display=swap'); 
+*{
+    font-family: "Afacad", serif
+}
+body{
+    height: 250vh;
+}
+:root{
+    --dark-color:#32193f;
+    --dark-Shadow-color:#32193f;
+    --pink-color:#a932bb;
+    --rosy-color:#ff31c5;
+    --inside-btn-color:#ffb8ea;
+    --section-color:rgb(190, 125, 215);
+    --sun-color:rgb(240, 241, 182);
+    --main-color:#e3d0ff;
+    --main-text-color:white;
+    --project2-color:black;
+
+}
+.root2{
+    --dark-color:#000000;
+    --dark-Shadow-color:#441f3e;
+    --pink-color:#e298ed;
+    --rosy-color:#900068;
+    --inside-btn-color:#ecb3db;
+    --section-color: rgb(94 35 117);
+    --sun-color:rgb(243, 238, 238);
+    --main-color:rgb(238 199 242);
+    --main-text-color:rgb(238 199 242);
+}
+h4{
+    color: var(--rosy-color);
+}
+.main-btn{
+background-color: var(--rosy-color);
+color:var(--inside-btn-color);
+padding: 0.5rem 1rem;
+}
+.main-btn:hover{
+    color:var(--inside-btn-color);
+    box-shadow: 0 0 25px var(--inside-btn-color); 
+}
+.main-btn:active{
+    border-color: none;
+}
+
+/* start navbar */
+.navbar{
+    background-color: var(--dark-color);
+}
+.navbar .navbar-nav .nav-link{
+    color: white;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover{
+color: var(--pink-color);
+}
+.navbar .toogle{
+    color: var(--sun-color);
+    background-color:var(--rosy-color);
+    border-radius: 50%;
+    width: 5vh;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--inside-btn-color);
+}
+.navbar .toogle svg{
+    cursor: pointer;
+}
+.navbar .toogle .moon{
+    display: none;
+}
+.navbar .navbar-toggler{
+    color: white;
+    font-size: 25px;
+    border-color: white;
+}
+.navbar .navbar-toggler:focus{
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"]{
+    border-color: var(--pink-color);
+}
+@media (max-width:991px){
+    .navbar .toogle{
+    margin: 11px !important;
+    }
+}
+/* end navbar */
+/* start landing */
+.landing{
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 72px);
+}
+/* .main-title::after{
+    content: "";
+    width: 120px;
+    height: 2px;
+    background-color: var(--dark-color);
+    position: absolute;
+    top:100%;
+    left:50%;
+    transform:translateX(-50%);
+} */
+/* start features */
+.features {
+    background-color: var(--main-color);
+}
+.features .icon-holder {
+height: 200px;
+}
+.features .icon-holder svg{
+left:50%;
+transform: translateX(-50%);
+}
+.features .icon-holder .number{
+    font-size: 12rem;
+    color:var(--section-color);
+}
+.features .icon-holder .icon{
+    color:var(--dark-color);
+}
+/* start our work */
+.our-work{
+background-color: var(--section-color);
+}
+.our-work ul .active {
+    background-color:var(--dark-color);
+    color: var(--pink-color);
+}
+.our-work ul li{
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+.our-work ul li:not(.active):hover{
+    color: var(--inside-btn-color);
+}
+.our-work .box{
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.our-work .box::before{
+    content:attr(data-work);
+    position: absolute;
+    width: calc(100%-10px);
+    height: calc(100%-10px);
+    background-color: #a932bb5f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #a932bb;
+    font-weight: 700;
+    transition: 0.3s;
+    font-size: 1.3rem;
+    transform: translateX(calc(-100% - 5px));
+}
+.our-work .box:hover::before{
+    transform: translateX(0);
+};
+
+/* end our work */
+/* start stuff */
+.stuff .description{
+max-width: 500px;
+}
+/* end stuff */
+/* start team */
+.team{
+    background-color: var(--dark-color);
+
+}
+.team h2, .team p{
+    color: var(--main-text-color);
+}
+.project{
+    background-color: var(--dark-color);
+}
+.project p{
+font-size: 150%;
+}
+.project2 h2 ,.project2 p,.project2 h5{
+    color:var(--project2-color);
+}
+.project2{
+    background-color: var(--main-color);
+}
+.project2 img{
+    box-shadow: 0 0 20px 9px var(--dark-color);
+}
+.subscribe{
+    background-color: var(--dark-color);
+}
+.subscribe input[type="text"]{
+    border: none;
+    border-bottom:1px solid white ;
+}
+.subscribe input[type="text"]:focus{
+    outline: none;
+}
+.subscribe::placeholder{
+    color: white;
+}
+.subscribe input[type="submit"]{
+    color:var(--pink-color);
+    background-color: var(--dark-color);
+}
+/* start-footer */
+/* .footer{
+    background-color: var(--dark-color);
+} */
+.image{
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--inside-btn-color);
+}
+.footer{
+    background-color: var(--dark-color);
+}
+
+.footer ul li a{
+    text-decoration: none;
+    color: var(--main-color);
+
+}
+ul li{
+    list-style: none;
+}
+.footer ul{
+display: flex;
+}
+footer{
+    position: relative;
+    bottom: 0;
+    padding: 40px 0;
+    width: 100%;
+}
+footer .icons{
+    text-align: center;
+    padding-bottom: 25px;
+    color: var(--main-color);
+}
+footer .icons-links li {
+    display: inline-block;
+}
+footer .icons-links  a{
+    color: var(--text-color);
+    font-size: 110%;
+    display: inline-block;
+    border: 2px solid var(--main-color);
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    padding: 5px;
+    transition: 0.3s ease-in-out;
+    width: 42px;
+    height: 42px;
+    font-weight: 800;
+    box-shadow: 0 0 25px var(--second-main-color);
+}
+footer .icons-links a:hover{
+    transform: scale(1.1)translateY(-10px);
+    background-color: var(--main-color);
+    color: black;
+    box-shadow: 0 0 25px var(--second-main-color);
+
+}
+footer ul{
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+footer ul li a{
+    color: white;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+footer .Quick-access ul li{
+    display: inline-block;
+}
+footer .Quick-access ul a{
+    margin: 10px;
+}
+footer .Quick-access ul li:hover{
+    color: var(--second-main-color);
+}
+footer .Quick-access ul{
+    margin: 20px 0px;
+}
+.box-container{
+border-radius: 12px;
+transition: all 0.4s ease;
+cursor: pointer;
+margin-bottom: 5rem;
+}
+.box-container img{
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.box-container:hover{
+transform: scale(1.05);
+box-shadow: 0 0 20px var(--rosy-color);
+}
